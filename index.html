@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style type="text/css">
+            .valid { color: green; }
+            .invalid { color: red; }
+        </style>
+    </head>
+    <body>
+        <div class="container my-5">
+            <form id="loto-form">
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">Prénom</label>
+                    <input type="text" class="form-control" id="firstname">
+                    <div class="invalid mt-1 d-none" id="missing-firstname">Veuillez fournir un prénom</div>
+                </div>
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="lastname">
+                    <div class="invalid mt-1 d-none" id="missing-lastname">Veuillez fournir un nom</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email">
+                    <div class="invalid mt-1 d-none" id="missing-email">Veuillez fournir un email</div>
+                    <div class="invalid mt-1 d-none" id="wrong-email">Votre email n'est pas valide</div>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Grille de loto</label>
+                    <div class="d-flex" id="loto-inputs">
+                        <input type="number" class="" id="number-0" min="1" max="10">
+                        <input type="number" class="ms-1" id="number-1" min="1" max="10">
+                        <input type="number" class="ms-1" id="number-2" min="1" max="10">
+                        <input type="number" class="ms-1" id="number-3" min="1" max="10">
+                        <input type="number" class="ms-1" id="number-4" min="1" max="10">
+                        <input type="number" class="ms-1" id="number-5" min="1" max="10">
+                    </div>
+                    <div class="invalid d-none mt-1" id="missing-number-0">Veuillez fournir un nombre dans le 1er champ</div>
+                    <div class="invalid d-none" id="missing-number-1">Veuillez fournir un nombre dans le 2e champ</div>
+                    <div class="invalid d-none" id="missing-number-2">Veuillez fournir un nombre dans le 3e champ</div>
+                    <div class="invalid d-none" id="missing-number-3">Veuillez fournir un nombre dans le 4e champ</div>
+                    <div class="invalid d-none" id="missing-number-4">Veuillez fournir un nombre dans le 5e champ</div>
+                    <div class="invalid d-none" id="missing-number-5">Veuillez fournir un nombre dans le 6e champ</div>
+                    <div class="valid d-none" id="valid-numbers">Félicitations, vous avez gagné 1 million !!!!!</div>
+                    <div class="invalid d-none" id="invalid-numbers">
+                        Désolé, vous avez perdu, les nombres gagnants sont : 
+                        <strong></strong>
+                    </div>
+                </div>
+                <div class="mb-3 mt-4">
+                    <button class="btn btn-primary" type="submit">Valider</button>
+                </div>
+            </form>
+        </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
